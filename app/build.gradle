@@ -89,4 +89,7 @@ dependencies {
 
     //CircleImageView
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //ML Kit  (Translate)
+    implementation 'com.google.mlkit:translate:16.1.2'
 }

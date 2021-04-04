@@ -26,7 +26,7 @@ data class Recipe(
     val cheap: Boolean = false,
     @SerializedName("extendedIngredients")
     val ingredients: List<Ingredient> = listOf(),
-    val instructions: String = ""
+    var instructions: String = ""
 ) : Parcelable
 
 @Parcelize

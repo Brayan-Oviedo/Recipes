@@ -1,11 +1,11 @@
-package co.recipes.domain.repository.recipe
+package co.recipes.domain.interactor.recipe
 
 import co.recipes.core.Result
-import co.recipes.data.model.recipe.Recipe
-import co.recipes.data.model.recipe.RecipeList
+import co.recipes.data.remote.recipe.RecipeDao
 
-interface RecipeInteractor {
+interface RecipeInteractor: RecipeDao {
 
-    suspend fun getAllRecipes(): Result<RecipeList>
-    suspend fun getRecipeById(id: Long, includeNutrition: Boolean): Result<Recipe>
+    suspend fun translate(text: String): Result<String>
+    suspend fun configTranslate(): Result<Unit>
+
 }

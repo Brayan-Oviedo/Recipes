@@ -3,7 +3,7 @@ package co.recipes.presentation.home
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import co.recipes.data.model.user.User
-import co.recipes.domain.repository.recipe.RecipeInteractor
+import co.recipes.domain.interactor.recipe.RecipeInteractor
 
 class HomeViewModel(): ViewModel() {
 

@@ -1,6 +1,5 @@
 package co.recipes.data.remote.recipe.impl
 
-import android.util.Log
 import co.recipes.core.Result
 import co.recipes.core.application.Constants
 import co.recipes.core.exceptions.RecipeDaoException
@@ -11,8 +10,8 @@ import co.recipes.data.remote.recipe.RecipeWebService
 
 class RecipeDaoImpl(private val recipeWebService: RecipeWebService): RecipeDao {
 
-    override suspend fun getAllRecipes(): Result<RecipeList> = try {
-        Result.Success(recipeWebService.getAllRecipes(Constants.API_KEY))
+    override suspend fun getAllRecipes(page: Int): Result<RecipeList> = try {
+        Result.Success(recipeWebService.getAllRecipes(Constants.API_KEY, page))
     }catch (e: Exception) {
         throw RecipeDaoException("Algo salio mal al obtener las recetas")
     }

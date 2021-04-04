@@ -2,6 +2,7 @@ package co.recipes.domain.repository.auth.register
 
 import co.recipes.core.Result
 import co.recipes.data.model.user.User
+import co.recipes.data.remote.image.ImageDao
 
 interface RegisterRepository {
 

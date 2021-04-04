@@ -6,6 +6,6 @@ import co.recipes.data.model.recipe.RecipeList
 
 interface RecipeDao {
 
-    suspend fun getAllRecipes(): Result<RecipeList>
+    suspend fun getAllRecipes(page: Int): Result<RecipeList>
     suspend fun getRecipeById(id: Long, includeNutrition: Boolean): Result<Recipe>
 }

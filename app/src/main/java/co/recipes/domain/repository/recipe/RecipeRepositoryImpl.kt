@@ -7,6 +7,6 @@ import co.recipes.data.remote.recipe.RecipeDao
 
 class RecipeRepositoryImpl(private val recipeDao: RecipeDao): RecipeRepository {
 
-    override suspend fun getAllRecipes(): Result<RecipeList> = recipeDao.getAllRecipes()
+    override suspend fun getAllRecipes(page: Int): Result<RecipeList> = recipeDao.getAllRecipes(page)
     override suspend fun getRecipeById(id: Long, includeNutrition: Boolean): Result<Recipe> = recipeDao.getRecipeById(id, includeNutrition)
 }

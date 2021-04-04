@@ -15,7 +15,8 @@ interface RecipeWebService {
 
     @Headers("Content-Type: application/json")
     @GET("complexSearch")
-    suspend fun getAllRecipes(@Query("apiKey") apiKey: String) : RecipeList
+    suspend fun getAllRecipes(@Query("apiKey") apiKey: String, @Query("offset") offset: Int,
+                              @Query("number") number: Int = 30) : RecipeList
 
     @Headers("Content-Type: application/json")
     @GET("{id}/information")

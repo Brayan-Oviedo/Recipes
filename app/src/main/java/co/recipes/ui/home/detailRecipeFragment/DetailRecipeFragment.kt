@@ -1,13 +1,18 @@
 package co.recipes.ui.home.detailRecipeFragment
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
+import androidx.preference.PreferenceManager
 import co.recipes.R
 import co.recipes.core.baseView.BaseFragment
 import co.recipes.data.model.recipe.Recipe
 import co.recipes.databinding.FragmentDetailRecipeBinding
 import co.recipes.ui.home.detailRecipeFragment.adapter.ingredient.IngredientAdapter
 import com.bumptech.glide.Glide
+import com.google.mlkit.nl.translate.TranslateLanguage
+import com.google.mlkit.nl.translate.Translation
+import com.google.mlkit.nl.translate.TranslatorOptions
 
 class DetailRecipeFragment : BaseFragment() {
 
